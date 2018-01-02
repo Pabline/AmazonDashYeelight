@@ -1,0 +1,15 @@
+{
+  "name": "AmazonDashYeelight",
+  "version": "1.0.0",
+  "description": "Amazon Dash hack to power on/off a Yeelight Bulb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pabline",
+  "license": "MIT",
+  "dependencies": {
+    "dhcp-spy": "^1.0.0",
+    "node-yeelight-wifi": "^0.1.2"
+  }
+}
