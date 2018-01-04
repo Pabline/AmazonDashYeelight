@@ -5,6 +5,8 @@ let look = new Lookup();
 look.findByPortscanning();
 var lights =[];
 
+var mac;
+
 look.on("detected",(light) =>
 {
    console.log("new yeelight detected: id="+light.id + " name="+light.name);
@@ -16,10 +18,12 @@ spy.listening.then(() => {
 })
 
 spy.on('detected', (mac) => {
+    this.mac = mac;
  console.log(`Detected a request from ${mac}`);
+
 })
 
-spy.on('fc:a6:67:ce:d8:b6', () => {
+spy.on(mac, () => {
  console.log('Someone pressed the "ON" dash button');
 
  if(lights.length>0){
